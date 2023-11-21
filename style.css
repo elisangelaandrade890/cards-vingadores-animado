@@ -1,0 +1,98 @@
+* {margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+header{
+    height: 20vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    width: 18vw;
+    height: 13vh;
+}
+
+.fotos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGjk_wY7gUfmX1wjz7xCWAlsP5bf3Ft8kKnUS0N70VtFSyeI75zgB5WOuVms_Jq8cSf1o&usqp=CAU);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.box{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: animate 30s linear infinite;
+}
+
+@keyframes animate{
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+}
+
+.box span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid transparent; 
+    border-radius: 15px; 
+}
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(141, 22, 22);
+  padding: 30px;
+  max-width: 30%;
+  border-radius: 5px;
+}  
+
+#h3footer{
+  color: white;
+}
+
+#formfooter label {
+  display: block; 
+  margin-top: 10px; 
+  color: white;
+}
+
+footer {
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer img{
+  width: 15vw;
+}
