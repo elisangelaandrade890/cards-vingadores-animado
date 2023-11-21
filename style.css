@@ -96,3 +96,57 @@ footer {
 footer img{
   width: 15vw;
 }
+
+
+@media(max-width: 550px){
+
+  header{
+    height: 15vh;
+    background-color: black;
+}
+.logo{
+    width: 30vw;
+    height: 8vh;
+}
+
+.fotos{
+    min-height: 100vh;
+}
+
+@keyframes animate{
+    0% {
+        transform: perspective(1800px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1800px) rotateY(360deg);
+    }
+}
+
+.box span{
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(250px);
+}
+
+footer {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer img{
+  width: 45vw;
+  margin-top: 5rem;
+}
+
+
+.formulario{
+  max-width: 75%;
+}  
+
+#formfooter label {
+  margin-left: 1rem; 
+}
+
+
+}
